@@ -1,0 +1,40 @@
+
+ <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+          <h1>Movies:</h1>
+        </div>
+      </div>
+ </div>
+        
+<% @movie.each do |movie| %>
+  <div class="stripe">
+    <div class="container">
+      <div class="row">
+       <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-sm-4 col-xs-6">
+        <a href="#" class="thumbnail">
+          <a href="/movies/<%= movie.id %>"><img src="<%= movie.url %>" alt="" height = "400px" width = "250px"></a>
+          <div class="container">
+    <div class="row">
+        <ul>
+          <li>
+            <a href="http://formidable-casterly-rock-91-130975.use1-2.nitrousbox.com/movies/<%= movie.id %>"><b>show</b></a> |
+            <a href="http://formidable-casterly-rock-91-130975.use1-2.nitrousbox.com/movies/<%= movie.id %>/edit"><b>edit</b></a> |
+            <a href="http://formidable-casterly-rock-91-130975.use1-2.nitrousbox.com/movies/<%= movie.id %>/destroy"><b>destroy</b></a> 
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
+<br>
